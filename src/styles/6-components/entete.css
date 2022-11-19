@@ -1,0 +1,104 @@
+.banner {
+    background-image: url('../banner2.jpg');
+    /* background-position: 0px -150px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    position: relative;
+    box-shadow: 0px 3px 30px 8px rgba(0, 0, 0, .8);
+
+}
+
+.entetePrincipal {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.entetePrincipal__liens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.entetePrincipal nav {
+    font-size: 16pt;
+}
+
+.entetePrincipal nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    display: inline;
+}
+
+.entetePrincipal nav a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 200px;
+    background-color: rgb(220, 160, 8);
+    transition: transform 0.2s ease-in-out;
+    transform: scale(0);
+}
+
+.entetePrincipal nav a:hover::after {
+    color: rgb(220, 160, 8);
+    transform: scale(1);
+}
+
+.entetePrincipal nav a:hover {
+    color: rgb(220, 160, 8);
+}
+
+.login-form {
+    display: flex;
+    align-items: center;
+}
+
+.login-form * {
+    padding: 5px;
+}
+
+.login-form input{
+    border: 2px solid black;
+    border-radius: 4px;
+    max-width: 200px;
+    height: 25px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.login-form button {
+    border: 2px solid black;
+    border-radius: 4px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: rgb(17, 243, 39);
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.login-form button:hover {
+    background-color: rgb(0, 208, 21);
+    color: white;
+}
+
+.logo {
+    width: 150px;
+    transition: transform .3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}

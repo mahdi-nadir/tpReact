@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    position: relative;
+    padding-bottom: 150px;
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(to right bottom, #f5f5f5 25%, #c48004);
+
+}

@@ -1,0 +1,132 @@
+.divPrincipalCardUneBiere {
+    max-width: 800px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.card, .cardUneBiere {
+    width: 320px;
+    min-height: 350px;
+    margin: auto;
+    background-image: linear-gradient(to right bottom, #c48004, #fff 50%, #c48004);
+    border: solid 4px #000;
+    border-radius: 150px 75px 30px 15px;
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.card__infor {
+    color: black;
+    letter-spacing: 2px;
+    line-height: 25px;
+    margin-top: 2em;
+    text-align: center;
+}
+
+.card__info {
+    color: black;
+    line-height: 45px;
+}
+
+.card__info h2 {
+    font-style: italic;
+    color: gray
+}
+
+.card:hover {
+    animation: shake .5s ease-in-out;
+}
+
+.cardUneBiere {
+    min-width: 100%;
+    min-height: 500px;
+    border-radius: 20px;
+    margin-top: 40px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageUneBiere {
+    max-width: 150px;
+    padding-bottom: 25px;
+    border-bottom: solid 2px gray;
+    transition: transform 1.5s ease-in-out;
+    cursor: grab;
+}
+
+.imageUneBiere:hover {
+    transform: scale(1.1);
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    20% {
+        transform:  rotate(2deg);
+    }
+
+    40% {
+        transform:  rotate(-1deg);
+    }
+
+    60% {
+        transform:  rotate(0deg);
+    }
+
+    80% {
+        transform:  rotate(-2deg);
+    }
+
+    100% {
+        transform:  rotate(-1deg);
+    }
+}
+
+.imageBiere {
+    width: 170px;
+    position: absolute;
+    top: -35%;
+    left: 5%;
+}
+
+
+
+.heartBiere {
+    width: 60px;
+    position: absolute;
+    top: 12%;
+    right: 15%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.heartBiere:hover {
+    transform: scale(1.2);
+}
+
+.card__info {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+.note {
+    font-size: 14pt;
+    font-style: italic;
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+

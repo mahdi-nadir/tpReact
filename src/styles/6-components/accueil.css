@@ -1,0 +1,8 @@
+.accueilContent {
+    font-size: clamp(10pt, 16pt, 18pt);
+    max-width: 100ch;
+    text-align: justify;
+    margin: 30px auto;
+    line-height: 30px;
+    text-indent: 20px;
+}

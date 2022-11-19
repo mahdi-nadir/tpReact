@@ -1,0 +1,18 @@
+.listeBieresTitre {
+    text-align: center;
+    font-size: 40pt;
+    margin-top: 1em;
+    font-family: 'Rubik Distressed', cursive;
+    letter-spacing: 4px;
+}
+
+.allCards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10em;
+    margin: 0 2em;
+    margin-top: 10em;
+}
+
