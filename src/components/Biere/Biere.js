@@ -4,6 +4,9 @@ import './Biere.css';
 export default class Biere extends Component {
     constructor (props) {
         super(props);
+        this.state = {
+            //
+        }
 
 }
 

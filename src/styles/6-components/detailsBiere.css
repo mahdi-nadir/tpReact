@@ -58,12 +58,13 @@
 
 }
 
-.commentaires h1 {
+.commentaires h2 {
     margin-bottom: 2rem;
+    margin-top: 1rem;
+    padding-top: 10px;
     font-family: 'Rubik Distressed', cursive;
     letter-spacing: 4px;
     text-decoration: underline;
-
 }
 
 .commentaires div {
@@ -95,7 +96,20 @@
     color: red;
 }
 
+.notation {
+    margin: auto;
+    max-width: 400px;
+    text-align: center;
+    border-bottom: 2px black solid;
+    padding: 2em 0;
+}
 
+.notation h2, .ajoutCommentaire h2 {
+    margin-bottom: 2rem;
+    font-family: 'Rubik Distressed', cursive;
+    letter-spacing: 4px;
+    text-decoration: underline;
+}
 
 
 
