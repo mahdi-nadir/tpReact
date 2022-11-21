@@ -1,24 +1,28 @@
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
+import { Rating } from 'react-simple-star-rating';
 import './DetailBiere.css';
 
 export default function DetailBiere(props) {
+    const [rating, setRating] = useState(0);
 
     const params = useParams();
-    // console.log(params);
+
+    const handleRating = (rate) => { // reference: https://github.com/awran5/react-simple-star-rating
+        setRating(rate);
+    }
+
 
     const biereUrl = `http://127.0.0.1:8000/webservice/php/biere/${params.id}`,
         commentaireUrl = `${biereUrl}/commentaire`,
         noteUrl = `${biereUrl}/note`;
 
-    // console.log(biereUrl);
 
     const [biere, setBiere] = useState({}),
         [commentaires, setCommentaires] = useState([]),
         [note, setNote] = useState(0);
 
     useEffect(() => {
-        // console.log('useEffect');
         fetch(biereUrl)
             .then(response => response.json())
             .then((donnees) => {
@@ -28,14 +32,12 @@ export default function DetailBiere(props) {
         fetch(commentaireUrl)
             .then(response => response.json())
             .then((donnees) => {
-                // console.log(donnees.data);
                 setCommentaires(donnees.data);
             })
 
         fetch(noteUrl)
             .then(response => response.json())
             .then((donnees) => {
-                // console.log(donnees.data);
                 setNote(donnees.data);
             })
         }, []); 
@@ -57,10 +59,15 @@ export default function DetailBiere(props) {
         // console.log(props.courriel);
 
         blocAjoutCommentaire = <div className='ajoutCommentaire'>
-                                    <textarea cols='60' placeholder='Ajoutez votre commentaire'></textarea>
+                                    <h2>Ajoutez votre commentaire</h2>
+                                    <textarea cols='60'></textarea>
                                     <button>Ajouter</button>
                                 </div>
-        // blocAjouteNote
+        
+        blocAjouteNote = <div className='etoiles'>
+                            <h2>Notez la bière</h2>
+                            <Rating onClick={handleRating} ratingValue={rating} fillColor='#000' emptyColor='#a3a3a3' />
+                        </div>
     }
 
     let laNote = Number(note.note).toFixed(1);
@@ -80,11 +87,15 @@ export default function DetailBiere(props) {
                 
                 <div className="commentaires">
                     
-                    <h1>{commentaires.length === 0 ? 'Aucun commentaire pour cet article' : 'Commentaire'}
+                    <h2>{commentaires.length === 0 ? 'Aucun commentaire pour cet article' : 'Commentaire'}
                         {commentaires.length > 1 ? 's' : ''}
-                    </h1>
+                    </h2>
                     
                     {commentaireDOM}
+                </div>
+                
+                <div className="notation">
+                    {blocAjouteNote}
                 </div>
                 
                 {blocAjoutCommentaire}
